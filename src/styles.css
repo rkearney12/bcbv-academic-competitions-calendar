@@ -13,10 +13,7 @@ a { color:inherit; }
 .brand span { display:flex; flex-direction:column; line-height:1.1; }
 .brand strong { font-size:14px; letter-spacing:.02em; }
 .brand small { margin-top:5px; font-size:11px; letter-spacing:.15em; text-transform:uppercase; opacity:.7; }
-.crest { width:41px; height:47px; position:relative; display:grid; place-items:center; border:1px solid rgba(255,255,255,.68); border-radius:4px 4px 18px 18px; color:white; font-family:"Libre Caslon Display",serif; }
-.crest:after { content:""; position:absolute; top:6px; bottom:6px; left:50%; border-left:1px solid rgba(255,255,255,.25); }
-.crest span { transform:translateX(-7px); font-size:20px; }
-.crest i { position:absolute; right:5px; bottom:6px; font-size:13px; }
+.crest { width:43px; height:49px; display:block; object-fit:contain; padding:3px; background:white; border-radius:3px; }
 nav { display:flex; gap:28px; margin-left:auto; }
 nav a { color:rgba(255,255,255,.76); text-decoration:none; font-size:13px; }
 nav a:hover { color:white; }
