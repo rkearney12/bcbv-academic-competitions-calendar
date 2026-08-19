@@ -69,7 +69,7 @@ function App() {
       && (year === "All year groups" || item.yearGroups.includes(year))
       && (status === "All statuses" || item.status === status)
       && (month === "All months" || item.month === Number(month));
-  }), [query, subject, year, status, month]);
+  }), [competitions, query, subject, year, status, month]);
 
   const today = new Date();
   const upcomingMonths = [today.getMonth() + 1, ((today.getMonth() + 1) % 12) + 1];
