@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { competitions as bundledCompetitions, statuses } from "./competitions";
-import { GOOGLE_SHEET_CSV_URL } from "./config";
+import { GOOGLE_SHEET_CSV_URL, SUBMIT_COMPETITION_FORM_URL } from "./config";
 import { loadCompetitions } from "./sheet-data";
 import "./styles.css";
 
@@ -91,7 +91,7 @@ function App() {
           <p className="eyebrow">Academic enrichment · 2026–27</p>
           <h1>Find the right<br/><em>challenge.</em></h1>
           <p className="hero-copy">A shared August-to-July view of external academic competitions for BCBV pupils and departments.</p>
-          <div className="hero-actions"><a className="button primary" href="#calendar">Explore the calendar</a><a className="button secondary" href="#guidance">How to use this tool</a></div>
+          <div className="hero-actions"><a className="button primary" href="#calendar">Explore the calendar</a><a className="button secondary" href="#guidance">How to use this tool</a><a className="button submit" href={SUBMIT_COMPETITION_FORM_URL} target="_blank" rel="noreferrer">Submit a competition ↗</a></div>
         </div>
         <div className="hero-panel" aria-label="Calendar summary">
           <span className="panel-kicker">At a glance</span>
@@ -123,7 +123,7 @@ function App() {
         {filtered.length === 0 ? <div className="empty"><h3>No competitions match these filters.</h3><button onClick={reset}>Reset the calendar</button></div> : view === "cards" ? <div className="card-grid">{filtered.map((item) => <CompetitionCard key={item.id} item={item} />)}</div> : <div className="month-groups">{academicMonths.map((monthNumber) => { const items = filtered.filter((item) => item.month === monthNumber); return items.length ? <section key={monthNumber}><h3><span>{String(monthNumber).padStart(2, "0")}</span>{monthNames[monthNumber]}</h3><div>{items.map((item) => <CompetitionCard key={item.id} item={item} />)}</div></section> : null; })}</div>}
       </section>
 
-      <section className="guidance" id="guidance"><div><p className="eyebrow">Staff guidance</p><h2>A shared view for departmental planning.</h2></div><ol><li><b>Review</b><span>Filter by subject and identify the opportunities worth investigating.</span></li><li><b>Verify</b><span>Confirm dates, fees, eligibility, safeguarding and the official entry route.</span></li><li><b>Update</b><span>Edit the connected Google Sheet, then refresh this page to see approved changes.</span></li></ol></section>
+      <section className="guidance" id="guidance"><div><p className="eyebrow">Staff guidance</p><h2>A shared view for departmental planning.</h2><a className="guidance-submit" href={SUBMIT_COMPETITION_FORM_URL} target="_blank" rel="noreferrer">Propose a competition for review ↗</a></div><ol><li><b>Review</b><span>Filter by subject and identify the opportunities worth investigating.</span></li><li><b>Verify</b><span>Confirm dates, fees, eligibility, safeguarding and the official entry route.</span></li><li><b>Submit</b><span>Use the staff form to propose an addition. Approved entries can then be added to the connected Google Sheet.</span></li></ol></section>
 
       <footer><div className="brand"><Logo /><span><strong>BCBV Academic Competitions</strong><small>Brighton College Bangkok Vibhavadi</small></span></div><p>Internal planning tool · Dates and details must be verified on official competition websites.</p></footer>
     </main>
