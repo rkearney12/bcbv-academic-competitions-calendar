@@ -45,7 +45,7 @@ Publishing makes that tab readable to anyone who has its link. Do not include pu
 Open `src/config.js`, paste the published CSV link between the quotation marks, and commit the change:
 
 ```js
-export const GOOGLE_SHEET_CSV_URL = "PASTE_THE_PUBLISHED_CSV_LINK_HERE";
+export const GOOGLE_SHEET_CSV_URL = "PASTE_THE_PUBLIC_CSV_LINK_HERE";
 ```
 
 GitHub Pages will rebuild the site. Once the deployment completes, the strip above the disclaimer will say **Live Google Sheet**. Sheet edits then appear whenever a visitor refreshes the page; the website itself does not need to be rebuilt for every data change.
