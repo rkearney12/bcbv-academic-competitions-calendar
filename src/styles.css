@@ -32,6 +32,7 @@ h1 em { color:#8fd0e4; font-weight:400; }
 .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
 .button { padding:14px 20px; border:1px solid rgba(255,255,255,.34); border-radius:3px; text-decoration:none; font-size:13px; font-weight:700; }
 .button.primary { color:var(--navy); background:white; }
+.button.submit { color:var(--navy); background:#8fd0e4; border-color:#8fd0e4; }
 .hero-panel { position:relative; z-index:1; padding:36px; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.06); backdrop-filter:blur(7px); }
 .panel-kicker { color:#9bcfe0; font-size:11px; text-transform:uppercase; letter-spacing:.18em; }
 .hero-panel > strong { display:block; margin-top:16px; font:82px/1 "Libre Caslon Display",serif; }
@@ -105,6 +106,7 @@ dd { margin:0; font-size:12px; line-height:1.45; }
 .month-groups section > div { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 .guidance { padding:82px max(30px,calc((100vw - 1180px)/2)); display:grid; grid-template-columns:1fr 1.2fr; gap:80px; color:white; background:var(--navy); }
 .guidance h2 { color:white; max-width:520px; }
+.guidance-submit { display:inline-block; margin-top:28px; padding-bottom:4px; color:#8fd0e4; border-bottom:1px solid rgba(143,208,228,.5); font-size:13px; font-weight:700; text-decoration:none; }
 .guidance ol { margin:0; padding:0; counter-reset:steps; list-style:none; }
 .guidance li { counter-increment:steps; padding:22px 0; display:grid; grid-template-columns:45px 130px 1fr; gap:18px; align-items:start; border-top:1px solid rgba(255,255,255,.16); }
 .guidance li:before { content:"0" counter(steps); color:#8fd0e4; font:13px "DM Sans",sans-serif; }
