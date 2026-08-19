@@ -9,7 +9,7 @@ const academicMonths = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
 const monthNames = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function Logo() {
-  return <div className="crest" aria-hidden="true"><span>B</span><i>V</i></div>;
+  return <img className="crest" src="./bcbv-crest.png" alt="Brighton College Bangkok Vibhavadi crest" />;
 }
 
 function Status({ value }) {
